@@ -1,0 +1,4 @@
+﻿  MinesweeperNewb.cpp
+C:\Users\Cain West\source\repos\MinesweeperNewb\MinesweeperNewb\MinesweeperNewb.cpp(5,18): warning C4273: 'getchar': inconsistent dll linkage
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\stdio.h(311,26): message : see previous definition of 'getchar'
+C:\Users\Cain West\source\repos\MinesweeperNewb\MinesweeperNewb\MinesweeperNewb.cpp(51,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
