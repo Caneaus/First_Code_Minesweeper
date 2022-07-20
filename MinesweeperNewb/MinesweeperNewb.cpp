@@ -96,7 +96,7 @@ int main() {
 			}
 		}
 		if (undisc == 0) {
-			printf("(No more undiscovered safe tiles) You won the game! you are the strongest lolicon!\n");
+			printf("(No more undiscovered safe tiles) You won the game! you are the strongest nigger killer!\n");
 			state = win;
 		
 		}
@@ -273,7 +273,7 @@ int main() {
 
 			}
 		}   
-		//printf("nakadashi middle schooler impregnation! There are %d mines adjacent to this tile. \n", minecount);
+		//printf("nakadashi There are %d mines adjacent to this tile. \n", minecount);
 		return 3;
 	}
 
