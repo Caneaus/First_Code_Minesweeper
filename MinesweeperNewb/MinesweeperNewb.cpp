@@ -84,7 +84,7 @@ int main() {
 			coord = ((r * c - 1) - (c - x) - (y - 1) * c);
 		}
 		if (board[coord] == 9 || board[coord] == 10) {
-			printf("You selected a mine and got gaped by a george floyd. GG homo\n");
+			printf("You selected a mine and died.\n");
 			Minesweeper(board, r, c, coord);
 			Minefield(board, r, c);
 			state = lose;
@@ -98,7 +98,7 @@ int main() {
 			}
 		}
 		if (undisc == 0) {
-			printf("(No more undiscovered safe tiles) You won the game! you are the strongest nigger killer!\n");
+			printf("(No more undiscovered safe tiles) You won the game! you win!\n");
 			state = win;
 		
 		}
@@ -159,7 +159,7 @@ int main() {
 			return 1;
 		}
 		if (board[coord] >= 0 && board[coord] < 9) {
-			//printf("Hey baka, you already selected that tile!\n");
+			//printf("you already selected that tile!\n");
 			return 3;
 		}
 		if (board[coord] == 11) {
