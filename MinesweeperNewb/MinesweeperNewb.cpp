@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include <time.h>
 
+//This is my first dive into learning C/C++! I have books and resources, but I prefer just hopping in and learning 
+// by actually writing something and getting a feel for it. I had fun with this little project.
+
 int getchar(void);
 
 void Minefield(int* board, int r, int c);
@@ -29,7 +32,6 @@ int main() {
 	state = play;
 	int x;
 	int y;
-	int cunnycunnycunny = 0;
 	//Create an array of size r x c using dynamic memory allocation then set difficulty ratio
 	int* board = (int*)malloc(c * r * sizeof(int));
 	int dif = 0;
@@ -109,7 +111,7 @@ int main() {
 		end = getchar();
 	}
 	putchar(end);
-		//free up the memory so my computer doesnt explode
+		//free up the memory to avoid any memory issues
 		free(board);
 		return 0;
 	}
@@ -153,11 +155,11 @@ int main() {
 		}
 		if (board[coord] == 9 || board[coord] == 10) {
 				board[coord] = 10;
-				//printf("you lost the game Wait, what was the game again? you selected a mine btw \n");
+				//printf("you lost the game Wait, what was the game again? you selected a mine  \n");
 			return 1;
 		}
 		if (board[coord] >= 0 && board[coord] < 9) {
-			//printf("Hey baka, you already selected that tile! I swear uwu\n");
+			//printf("Hey baka, you already selected that tile!\n");
 			return 3;
 		}
 		if (board[coord] == 11) {
@@ -166,21 +168,21 @@ int main() {
 				//printf("This is not a left edge tile, checking left tile... \n");
 				if (board[coord - 1] == 9) {
 					minecount = minecount + 1;
-					//printf("Ack! Its a mine to your left! look up the dancing israelis for gifs of cool israelis dancing!... %d mines detected so far \n", minecount);
+					//printf(" Its a mine to your left! %d mines detected so far \n", minecount);
 				}
 			}
 				if (coord - c >= 0 && coord % c != 0) {
 					//printf("This is not a top edge tile, checking top left tile...\n");
 					if (board[coord - 1 - c] == 9) {
 						minecount = minecount + 1;
-					//	printf("Ack! Its a mine to your top left! You should probably install gentoo... %d mines detected so far \n", minecount);
+					//	printf("Its a mine to your top left!%d mines detected so far \n", minecount);
 					}
 				}
 				if (coord + c <= r * c - 1 && coord %c !=0) {
 					//printf("This is not a bottom edge tile, checking the bot left tile...\n");
 					if (board[coord - 1 + c] == 9) {
 						minecount = minecount + 1;
-						//printf("Ack! Its a mine to your bot left! I use arch btw... %d mines detected so far \n", minecount);
+						//printf("Its a mine to your bot left! %d mines detected so far \n", minecount);
 					}
 				}
 			
@@ -188,21 +190,21 @@ int main() {
 					//	printf("This is not a right edge tile, checking right tile...\n");
 					if (board[coord + 1] == 9) {
 						minecount = minecount + 1;
-						//printf("Ack! Its a mine to your right! Whatever, works on my machine... %d mines detected so far \n", minecount);
+						//printf(" Its a mine to your right! %d mines detected so far \n", minecount);
 					}
 				}
 				if (coord - c >= 0 && coord % c != c - 1) {
 				//	printf("This is not a top edge tile, checking top right tile...\n");
 					if (board[coord + 1 - c]==9) {
 						minecount = minecount + 1;
-					//	printf("Ack! Its a mine to your top right! Onii-chan, watch your step... %d mines detected so far \n", minecount);
+					//	printf("Its a mine to your top right!%d mines detected so far \n", minecount);
 					}
 				}
 				if (coord + c <= r * c - 1 && coord % c != c - 1) {
 				//	printf("This is not a bottom edge tile, checking the bottom right tile...\n");
 					if (board[coord + 1 + c]==9) {
 						minecount = minecount + 1;
-				//		printf("Ack! Its a mine to your bottom right! Inshallah we do not step on it... %d mines detected so far \n", minecount);
+				//		printf(" Its a mine to your bottom right! %d mines detected so far \n", minecount);
 					}
 				}
 
@@ -211,7 +213,7 @@ int main() {
 			//	printf("This is not a bottom edge tile, checking bottom tile...\n");
 					if (board[coord + c] == 9) {
 						minecount = minecount + 1;
-				//		printf("Ack! Its a mine to your bottom! Don't let it gape you like your uncle did... %d mines detected so far \n",minecount);
+				//		printf("Its a mine to your bottom! %d mines detected so far \n",minecount);
 					}
 					
 			}
@@ -219,7 +221,7 @@ int main() {
 				//printf("This is not a top edge tile, checking top tile...\n");
 				if (board[coord - c] == 9) {
 					minecount = minecount + 1;
-					//printf("Ack! Its a mine to your top! Don't let the glowies do you like brohama osama... %d mines detected so far \n",minecount);
+					//printf("Its a mine to your top! %d mines detected so far \n",minecount);
 				}
 			}
 			board[coord] = minecount;
@@ -273,7 +275,7 @@ int main() {
 
 			}
 		}   
-		//printf("nakadashi There are %d mines adjacent to this tile. \n", minecount);
+		//printf("There are %d mines adjacent to this tile. \n", minecount);
 		return 3;
 	}
 
