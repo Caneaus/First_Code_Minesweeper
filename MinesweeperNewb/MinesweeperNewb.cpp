@@ -45,7 +45,7 @@ int main() {
 		dif = 50;
 	}
 	else {
-		printf("If you slected an invalid difficulty you are destined for death.\n");
+		printf("If you slected an invalid difficulty. Every tile set to -Mine-.\n");
 	}
 	//Put some sort of thing here that randomly generates "mines" at a certain frequency, lets say mines are 9, and unrevealed tiles as 11. Then, as we play the game
 	// tiles will be assigned 1, 2, 3, 4, 5, 6, 7, and 8 based on number of adjacent mines when revealed. 0 will be empty revealed tiles, and a 10 will be a game loss.
@@ -78,7 +78,7 @@ int main() {
 		scanf_s("%d %d", &x, &y);
 		coord = ((r * c - 1) - (c - x) - (y - 1) * c);
 		while (coord > r*c-1 || coord < 0) {
-			printf("That isn't in the gameboard dipshit.\n");
+			printf("That isn't in the gameboard.\n");
 			printf("\n Select a Tile by inputting the x and y value of the Tile:\n ");
 			scanf_s("%d %d", &x, &y);
 			coord = ((r * c - 1) - (c - x) - (y - 1) * c);
